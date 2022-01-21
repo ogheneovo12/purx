@@ -3,7 +3,7 @@ import MainLayouts from "../layouts/mainLayouts";
 
 export default function AboutUs() {
   return (
-    <Box py={50} minH={"100vh"} className="main_overlay">
+    <Box pt={140} pb={50} minH={"100vh"} className="main_overlay">
       <Box
         backgroundRepeat={"no-repeat"}
         backgroundImage={

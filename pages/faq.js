@@ -15,7 +15,7 @@ import MainLayouts from "../layouts/mainLayouts";
 
 export default function Faq() {
   return (
-    <Box py={50} minH={"100vh"} className="main_overlay">
+    <Box py={140} minH={"100vh"} className="main_overlay">
       <Box
         backgroundRepeat={"no-repeat"}
         backgroundImage={
