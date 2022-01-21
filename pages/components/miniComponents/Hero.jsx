@@ -61,7 +61,7 @@ const TextContainer = styled.div`
   img {
     width: 1320px;
     position: absolute;
-    top: -30%;
+    top: -20%;
     left: 0%;
     z-index: 0;
   }
