@@ -23,6 +23,9 @@ export default Navbar;
 
 const NavbarContainer = styled.div`
   margin: 0 auto;
+  padding: 12px 5px;
+  width: 92%;
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -34,10 +37,15 @@ const NavbarContainer = styled.div`
 const LinkContainer = styled.div`
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  width: 100%;
   margin: 0 auto;
 
   li {
-    margin-right: 12px;
+    font-size: 14px;
+    width: 100%;
+    margin-right: 2px;
+    text-align: center;
   }
   button {
     background-color: #f47323;
@@ -47,5 +55,6 @@ const LinkContainer = styled.div`
     border-radius: 100px;
     padding: 10px 20px 10px 20px;
     color: #fff;
+    width: 100%;
   }
 `;
