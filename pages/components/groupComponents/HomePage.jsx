@@ -4,6 +4,7 @@ import Navbar from "../miniComponents/Navbar";
 import styled from "styled-components";
 import Card from "../miniComponents/Card";
 import TrustedPlatform from "../miniComponents/TrustedPlatform";
+import InstantPayout from "../miniComponents/InstantPayout";
 
 function HomePage() {
   return (
@@ -14,6 +15,7 @@ function HomePage() {
         <Card />
       </NavbarHeroContainer>
       <TrustedPlatform />
+      <InstantPayout />
     </HomePageContainer>
   );
 }
