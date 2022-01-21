@@ -3,20 +3,26 @@ import Hero from "../miniComponents/Hero";
 import Navbar from "../miniComponents/Navbar";
 import styled from "styled-components";
 import Card from "../miniComponents/Card";
+import TrustedPlatform from "../miniComponents/TrustedPlatform";
 
 function HomePage() {
   return (
-    <div>
+    <HomePageContainer>
       <NavbarHeroContainer>
         <Navbar />
         <Hero />
         <Card />
       </NavbarHeroContainer>
-    </div>
+      <TrustedPlatform />
+    </HomePageContainer>
   );
 }
 
 export default HomePage;
+
+const HomePageContainer = styled.div`
+  background: #191927;
+`;
 
 const NavbarHeroContainer = styled.div`
   background: linear-gradient(
