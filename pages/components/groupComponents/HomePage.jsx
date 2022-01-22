@@ -5,6 +5,9 @@ import styled from "styled-components";
 import Card from "../miniComponents/Card";
 import TrustedPlatform from "../miniComponents/TrustedPlatform";
 import InstantPayout from "../miniComponents/InstantPayout";
+import Excahange from "../miniComponents/Excahange";
+import Features from "../miniComponents/Features";
+import Cta from "../miniComponents/Cta";
 
 function HomePage() {
   return (
@@ -16,6 +19,9 @@ function HomePage() {
       </NavbarHeroContainer>
       <TrustedPlatform />
       <InstantPayout />
+      <Excahange />
+      <Features />
+      <Cta />
     </HomePageContainer>
   );
 }
