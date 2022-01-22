@@ -32,8 +32,15 @@ export default function Faq() {
             Get in touch with us anytime any day
           </Text>
 
-          <Flex flexDirection={["column","column","row"]} alignItems={"center"}>
-            <Flex mr={[0, 10]} justifyContent={"center"} width={["100%","100%","50%"]}>
+          <Flex
+            flexDirection={["column", "column", "row"]}
+            alignItems={"center"}
+          >
+            <Flex
+              mr={[0, 10]}
+              justifyContent={"center"}
+              width={["100%", "100%", "50%"]}
+            >
               <Box
                 width={400}
                 p={10}
@@ -45,17 +52,29 @@ export default function Faq() {
                 <Text>Call us : 080848484848</Text>
               </Box>
             </Flex>
-            <Box width={["100%","100%","50%"]}>
-              <Heading textAlign={["center","center","center","left"]} mb={10} fontSize={24}>Send us a message</Heading>
+            <Box width={["100%", "100%", "50%"]}>
+              <Heading
+                textAlign={["center", "center", "center", "left"]}
+                mb={10}
+                fontSize={24}
+              >
+                Send us a message
+              </Heading>
               <form>
                 <FormControl mb={"20px"}>
                   <FormLabel htmlFor="firstName">First Name</FormLabel>
-                  <Input backgroundColor={"#FFF"} id="firstName" type="text" />
+                  <Input
+                   height={"56px"}
+                    backgroundColor={"#FFF"}
+                    id="firstName"
+                    type="text"
+                  />
                 </FormControl>
 
                 <FormControl mb={"20px"}>
                   <FormLabel htmlFor="lastName">Last Name</FormLabel>
                   <Input
+                   height={"56px"}
                     backgroundColor={"#FFF"}
                     name="lastName"
                     id="lastName"
@@ -64,11 +83,16 @@ export default function Faq() {
                 </FormControl>
                 <FormControl mb={"20px"}>
                   <FormLabel htmlFor="email">Your Email</FormLabel>
-                  <Input backgroundColor={"#FFF"} id="email" type="email" />
+                  <Input
+                    height={"56px"}
+                    backgroundColor={"#FFF"}
+                    id="email"
+                    type="email"
+                  />
                 </FormControl>
                 <FormControl mb={"20px"}>
                   <FormLabel htmlFor="email">Message</FormLabel>
-                  <Textarea backgroundColor={"#FFF"} />
+                  <Textarea height={"121px"} backgroundColor={"#FFF"} />
                 </FormControl>
               </form>
             </Box>
