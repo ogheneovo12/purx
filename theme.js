@@ -11,16 +11,23 @@ const theme = extendTheme({
       body: {
         color: "#A5ADCF",
       },
-     
+      a: {
+        color: "#fff",
+      },
     },
   },
-  components:{
-      Heading:{
-          baseStyle:{
-              color:"#fff"
-          }
-      }
-  }
+  components: {
+    Heading: {
+      baseStyle: {
+        color: "#fff",
+      },
+    },
+    Link: {
+      baseStyle: {
+        color: "#fff",
+      },
+    },
+  },
 });
 
 export default theme;

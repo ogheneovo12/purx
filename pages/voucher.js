@@ -10,10 +10,12 @@ import {
   Input,
   Text,
 } from "@chakra-ui/react";
+import MainLayouts from "../layouts/mainLayouts";
 
 export default function Voucher() {
   return (
     <Box
+     mt={"-72px"}
       py={10}
       minH={"100vh"}
       backgroundSize={"cover"}
@@ -132,3 +134,5 @@ export default function Voucher() {
     </Box>
   );
 }
+
+Voucher.layout = MainLayouts;

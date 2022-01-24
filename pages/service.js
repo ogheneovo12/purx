@@ -165,6 +165,7 @@ export default function ServicePage() {
           backgroundRepeat={"no-repeat"}
           backgroundImage={"url(/white-curve-2.png)"}
           backgroundColor={"#262635"}
+          backgroundSize={"contain"}
           minH={530}
           flexDirection={"column"}
           alignItems={"center"}

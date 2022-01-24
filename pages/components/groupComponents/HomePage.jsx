@@ -26,6 +26,7 @@ function HomePage() {
   );
 }
 
+
 export default HomePage;
 
 const HomePageContainer = styled.div`
