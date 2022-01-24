@@ -1,3 +1,4 @@
+import { AddIcon, MinusIcon } from "@chakra-ui/icons";
 import {
   Accordion,
   AccordionButton,
@@ -12,6 +13,32 @@ import {
   Text,
 } from "@chakra-ui/react";
 import MainLayouts from "../layouts/mainLayouts";
+
+const questions = [
+  {
+    title: "How to log an error complaint?",
+    info: `Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+   sed do eiusmod tempor incididunt ut labore et dolore magna
+   aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+   ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
+  },
+  {
+    title: "How to fund your purx account with ease?",
+    info: `answers and solutions to our most frequently received
+  complaints and enquiries. We have compiled a list of
+  frequently asked questions which offer answers We have
+  compiled a list of frequently asked questions which offer
+  answers and solutions to our most frequently received
+  complaints and enquiries.`,
+  },
+  {
+    title: "How to log an error complaint?",
+    info: `Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+  sed do eiusmod tempor incididunt ut labore et dolore magna
+  aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+  ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
+  },
+];
 
 export default function Faq() {
   return (
@@ -32,6 +59,7 @@ export default function Faq() {
             answers and solutions to our most frequently received complaints and
             enquiries.
           </Text>
+
           <Box
             minH={536}
             borderRadius={7}
@@ -40,42 +68,32 @@ export default function Faq() {
             maxW={1013}
             p={10}
           >
-            <Accordion>
-              <AccordionItem>
-                <h2>
-                  <AccordionButton>
-                    <Box flex="1" textAlign="left">
-                      1. How to log an error complaint?
-                    </Box>
-                    <AccordionIcon />
-                  </AccordionButton>
-                </h2>
-                <AccordionPanel pb={4}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.
-                </AccordionPanel>
-              </AccordionItem>
-
-              <AccordionItem>
-                <h2>
-                  <AccordionButton>
-                    <Box flex="1" textAlign="left">
-                      3. How to fund your purx account with ease?
-                    </Box>
-                    <AccordionIcon />
-                  </AccordionButton>
-                </h2>
-                <AccordionPanel pb={4}>
-                  answers and solutions to our most frequently received
-                  complaints and enquiries. We have compiled a list of
-                  frequently asked questions which offer answers We have
-                  compiled a list of frequently asked questions which offer
-                  answers and solutions to our most frequently received
-                  complaints and enquiries.
-                </AccordionPanel>
-              </AccordionItem>
+            <Accordion  allowToggle>
+              {questions?.map((quest, i) => (
+                <AccordionItem key={`${quest?.title}${i}`} >
+                  {({ isExpanded }) => (
+                    <>
+                      <h2
+                        display={"flex"}
+                        justifyContent={"space-between"}
+                        alignItems={"center"}
+                      >
+                        <AccordionButton minHeight={"97px"}>
+                          <Box  fontSize={"20px"} flex="1" textAlign="left">
+                            {i + 1}. {quest?.title}
+                          </Box>
+                          {isExpanded ? (
+                            <MinusIcon fontSize="12px" />
+                          ) : (
+                            <AddIcon fontSize="12px" />
+                          )}
+                        </AccordionButton>
+                      </h2>
+                      <AccordionPanel fontSize={"16px"} pb={4}>{quest?.info}</AccordionPanel>
+                    </>
+                  )}
+                </AccordionItem>
+              ))}
             </Accordion>
           </Box>
         </Container>
