@@ -1,23 +1,18 @@
 import {
   Box,
   Container,
-  Flex,
-  Heading,
-  Image,
-  Text,
-  FormControl,
-  FormLabel,
-  FormErrorMessage,
-  FormHelperText,
-  Input,
+  Flex, FormControl,
+  FormLabel, Heading, Input, Text, Textarea
 } from "@chakra-ui/react";
 import MainLayouts from "../layouts/mainLayouts";
-import { Textarea } from "@chakra-ui/react";
+
+
 
 export default function Faq() {
   return (
-    <Box py={140} minH={"100vh"} className="main_overlay">
+    <Box minH={"100vh"} className="main_overlay">
       <Box
+        pt={140}
         backgroundRepeat={"no-repeat"}
         backgroundImage={
           "url(/wavy_design.png),url(/oval_blue.png),url(/oval_orange.png)"
@@ -64,7 +59,7 @@ export default function Faq() {
                 <FormControl mb={"20px"}>
                   <FormLabel htmlFor="firstName">First Name</FormLabel>
                   <Input
-                   height={"56px"}
+                    height={"56px"}
                     backgroundColor={"#FFF"}
                     id="firstName"
                     type="text"
@@ -74,7 +69,7 @@ export default function Faq() {
                 <FormControl mb={"20px"}>
                   <FormLabel htmlFor="lastName">Last Name</FormLabel>
                   <Input
-                   height={"56px"}
+                    height={"56px"}
                     backgroundColor={"#FFF"}
                     name="lastName"
                     id="lastName"
@@ -99,8 +94,11 @@ export default function Faq() {
           </Flex>
         </Container>
       </Box>
+     
     </Box>
   );
 }
+
+
 
 Faq.layout = MainLayouts;

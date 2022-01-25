@@ -9,19 +9,27 @@ import {
   Heading,
   Input,
   Text,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalCloseButton,
+  Image,
 } from "@chakra-ui/react";
+import React from "react";
 import MainLayouts from "../layouts/mainLayouts";
 
 export default function Voucher() {
+  const [isOpen, setIsOpen] = React.useState(false);
   return (
     <Box
-     mt={"-72px"}
-      py={10}
+      mt={"-72px"}
+      py={20}
       minH={"100vh"}
       backgroundSize={"cover"}
       backgroundRepeat={"no-repeat"}
       backgroundImage={` url(/voucher-bg.png), url(/voucher-bg2.png),url(/voucher-bg3.png)`}
     >
+      <SuccessAlert isOpen={isOpen} onClose={() => setIsOpen(false)} />
       <Container maxW="container.xl">
         <Flex
           flexDirection={["column", "column", "row"]}
@@ -34,9 +42,9 @@ export default function Voucher() {
               textAlign={["center", "center", "left"]}
               py={[10, 10, 0]}
               maxW={"591px"}
-              mx={["auto","auto","0"]}
+              mx={["auto", "auto", "0"]}
             >
-              <Heading  mb={5} fontSize={["24px", "32px", "32px", "55px"]}>
+              <Heading mb={5} fontSize={["24px", "32px", "32px", "55px"]}>
                 One-stop Virtual Voucher Solution For Your Business Needs
               </Heading>
               <Text mb={10} lineHeight={"28px"}>
@@ -122,8 +130,9 @@ export default function Voucher() {
                     backgroundColor={"#F67E26"}
                     borderRadius={"50px"}
                     fontSize={"14px"}
+                    onClick={() => setIsOpen(true)}
                   >
-                    How it works
+                    Buy Now
                   </Button>
                 </Flex>
               </form>
@@ -132,6 +141,38 @@ export default function Voucher() {
         </Flex>
       </Container>
     </Box>
+  );
+}
+
+function SuccessAlert({ isOpen, onClose }) {
+  return (
+    <Modal isOpen={isOpen} onClose={onClose}>
+      <ModalOverlay />
+      <ModalContent width={"90%"} maxW={"500px"}>
+        <ModalCloseButton />
+        <Flex
+          textAlign={"center"}
+          width={"100%"}
+          borderRadius={"10px"}
+          p={5}
+          alignItems={"center"}
+          minHeight={"400px"}
+          backgroundColor={"#fff"}
+          flexDirection={"column"}
+        >
+          <Image src="/t_comp.png" />
+          <Text color="#464141" fontSize={"20px"} my={5} fontWeight={"bold"}>
+            Voucher Created Successfully
+          </Text>
+          <Text color="#464141" fontSize={"20px"} mb={"5px"} fontWeight={"500"}>
+            Your Voucher Code:
+          </Text>
+          <Text color="#464141" fontSize={"20px"} fontWeight={"700"}>
+            830-8393-8494-9393
+          </Text>
+        </Flex>
+      </ModalContent>
+    </Modal>
   );
 }
 

@@ -44,15 +44,28 @@ const countDownRenderer = ({ days, hours, minutes, seconds, completed }) => (
 export default function ComingSoon(props) {
   return (
     <Box
-  
       minHeight={"100vh"}
       backgroundColor={"#1D1D25"}
       backgroundImage={`linear-gradient(180deg, rgba(1, 8, 31, 0.8) 0%, #01081F 100%), url(/background.png)`}
     >
       <Container maxW={"container.xl"}>
-        <Flex flexDirection={["column","row"]} alignItems={"center"}  justifyContent={"space-between"} as="header">
-          <Image height={"75px"} width={"199px"} src="/purex_logo.png" alt="logo" />
-          <Countdown autoStart date={"2022-01-27T18:00:44.647Z"} renderer={countDownRenderer} />
+        <Flex
+          flexDirection={["column", "row"]}
+          alignItems={"center"}
+          justifyContent={"space-between"}
+          as="header"
+        >
+          <Image
+            height={"75px"}
+            width={"199px"}
+            src="/purex_logo.png"
+            alt="logo"
+          />
+          <Countdown
+            autoStart
+            date={"2022-01-27T18:00:44.647Z"}
+            renderer={countDownRenderer}
+          />
         </Flex>
       </Container>
       <Container
@@ -85,8 +98,7 @@ export default function ComingSoon(props) {
           px={[5, 5, 5, 10]}
           py={5}
           borderRadius={"16px"}
-          backdropFilter={"40px"}
-          backgroundColor={"rgba(255, 255, 255, 0.2);"}
+          backgroundColor={"inherit"}
           mx={"auto"}
           maxW={"600px"}
           width={"100%"}
@@ -94,6 +106,19 @@ export default function ComingSoon(props) {
           flexDirection={"column"}
           justifyContent={"center"}
           alignItems={"center"}
+          position={"relative"}
+          overflow={"hidden"}
+          
+          _before={{
+            content: '""',
+            position: "absolute",
+            boxShadow:"inset 0 0 2000px rgba(255, 255, 255, .5)",
+            top: 0,
+            right: 0,
+            bottom: 0,
+            left: 0,
+            filter: "blur(10px)",
+          }}
         >
           <Heading
             color={"#FFFFFF"}
